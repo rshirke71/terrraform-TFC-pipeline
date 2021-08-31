@@ -37,9 +37,17 @@ phases:
       - echo `pwd`
       - ls -ltra
 
-  build:
+ build:
     commands:
+      - cd $CODEBUILD_SRC_DIR_source1
+      - echo `pwd`      
+      - touch file1
+      - ls -ltr
+      
+      - cd $CODEBUILD_SRC_DIR_source2
+      - touch file2
       - echo `pwd`
+
       - ls -ltra
  #     - docker ps
       - uname -a
@@ -48,6 +56,19 @@ phases:
  ####     - terraform graph | dot -Tpng > graph.png
  #     - terraform state list
  #     - terraform $TF_COMMAND -auto-approve
+ 
+ artifacts:
+  files:
+    - '**.*'
+  secondary-artifacts:
+    artifact1:
+      base-directory: $CODEBUILD_SRC_DIR_source1
+      files:
+        - file1
+    artifact2:
+      base-directory: $CODEBUILD_SRC_DIR_source2
+      files:
+        - file2
 
   post_build:
     commands:
