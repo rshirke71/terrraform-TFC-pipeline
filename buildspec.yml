@@ -28,8 +28,8 @@ phases:
  #     - "mv terraform /usr/local/bin/"
   pre_build:
     commands:
-      - terraform init -verify-plugins=false
-#      - terraform init
+#      - terraform init -verify-plugins=false
+      - terraform init
       - terraform workspace list
       - terraform state list
       - terraform fmt
