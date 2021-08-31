@@ -26,18 +26,18 @@ phases:
  #     - "wget https://releases.hashicorp.com/terraform/0.11.14/terraform_0.11.14_linux_amd64.zip"
  #     - "unzip terraform_0.11.14_linux_amd64.zip"
  #     - "mv terraform /usr/local/bin/"
-  pre_build:
-    commands:
+ # pre_build:
+#    commands:
 #      - terraform init -verify-plugins=false
 #      - terraform init
 #      - terraform workspace list
 #      - terraform state list
 #      - terraform fmt
 #      - terraform validate -backend=false
-      - echo `pwd`
-      - ls -ltra
+#      - echo `pwd`
+#      - ls -ltra
 
- build:
+  build:
     commands:
       - cd $CODEBUILD_SRC_DIR_source1
       - echo `pwd`      
@@ -57,18 +57,18 @@ phases:
  #     - terraform state list
  #     - terraform $TF_COMMAND -auto-approve
  
- artifacts:
-  files:
-    - '**.*'
-  secondary-artifacts:
-    artifact1:
-      base-directory: $CODEBUILD_SRC_DIR_source1
-      files:
-        - file1
-    artifact2:
-      base-directory: $CODEBUILD_SRC_DIR_source2
-      files:
-        - file2
+#  artifacts:
+#   files:
+#    - '**.*'
+#  secondary-artifacts:
+#    artifact1:
+#      base-directory: $CODEBUILD_SRC_DIR_source1
+#      files:
+#        - file1
+#    artifact2:
+#      base-directory: $CODEBUILD_SRC_DIR_source2
+#      files:
+#        - file2
 
   post_build:
     commands:
