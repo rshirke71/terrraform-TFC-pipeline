@@ -41,7 +41,7 @@ phases:
     commands:
       - echo `pwd`
       - ls -ltra
-      - docker ps
+ #     - docker ps
       - uname -a
       - ifconfig -a
  #     - terraform plan -out plan.out
