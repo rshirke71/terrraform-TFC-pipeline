@@ -39,7 +39,7 @@ phases:
 
   build:
     commands:
-      - wrkspace = `pwd`
+      - export wrkspace=`echo $PWD`
       - echo $wrkspace
       - ls -ltr
       - git clone https://github.com/rshirke71/ProductLine1_App1_Proj1_Infra.git
