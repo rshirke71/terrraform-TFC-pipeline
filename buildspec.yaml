@@ -39,6 +39,14 @@ phases:
 
   build:
     commands:
+      - echo `pwd`      
+      - ls -ltr
+      - git clone https://github.com/rshirke71/ProductLine1_App1_Proj1_Infra.git
+      - mkdir modules
+      - cd modules
+      - git clone https://github.com/rshirke71/terraform-aws-ec2-instance.git
+      - ls -ltr
+      
       - echo $CODEBUILD_SRC_DIR_source1
       - echo $$CODEBUILD_SRC_DIR_source2
       - cd $CODEBUILD_SRC_DIR_source1
