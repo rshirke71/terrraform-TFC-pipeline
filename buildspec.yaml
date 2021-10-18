@@ -53,8 +53,8 @@ phases:
 
       - ls -ltra
  #     - docker ps
-      - uname -a
-      - ifconfig -a
+ #####     - uname -a
+ #####     - ifconfig -a
  #     - terraform plan -out plan.out
  ####     - terraform graph | dot -Tpng > graph.png
  #     - terraform state list
