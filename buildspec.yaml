@@ -69,7 +69,9 @@ phases:
  ####     - terraform graph | dot -Tpng > graph.png
  #     - terraform state list
  #     - terraform $TF_COMMAND -auto-approve
- 
+
+##### added a feature here
+
 #  artifacts:
 #   files:
 #    - '**.*'
