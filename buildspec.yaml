@@ -59,6 +59,7 @@ phases:
  ####     - terraform graph | dot -Tpng > graph.png
  #####     - terraform state list
  #####     - terraform $TF_COMMAND -auto-approve
+ ##### testing git merge
  
 #  artifacts:
 #   files:
