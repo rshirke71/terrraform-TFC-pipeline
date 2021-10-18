@@ -67,14 +67,10 @@ phases:
  #####     - ifconfig -a
  #     - terraform plan -out plan.out
  ####     - terraform graph | dot -Tpng > graph.png
-
- #####     - terraform state list
- #####     - terraform $TF_COMMAND -auto-approve
- ##### testing git merge
- 
+ #     - terraform state list
+ #     - terraform $TF_COMMAND -auto-approve
 
 ##### added a feature here
-
 
 #  artifacts:
 #   files:
