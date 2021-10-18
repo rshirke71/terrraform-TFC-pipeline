@@ -57,8 +57,8 @@ phases:
  #####     - ifconfig -a
  #     - terraform plan -out plan.out
  ####     - terraform graph | dot -Tpng > graph.png
- #     - terraform state list
- #     - terraform $TF_COMMAND -auto-approve
+ #####     - terraform state list
+ #####     - terraform $TF_COMMAND -auto-approve
  
 #  artifacts:
 #   files:
