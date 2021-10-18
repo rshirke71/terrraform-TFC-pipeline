@@ -40,6 +40,16 @@ phases:
 
   build:
     commands:
+      - export wrkspace=`echo $PWD`
+      - echo $wrkspace
+      - ls -ltr
+      - git clone https://github.com/rshirke71/ProductLine1_App1_Proj1_Infra.git
+      - mkdir modules
+      - cd modules
+      - git clone https://github.com/rshirke71/terraform-aws-ec2-instance.git
+      - cd $wrkspace
+      - ls -ltrR
+      
       - echo $CODEBUILD_SRC_DIR_source1
       - echo $$CODEBUILD_SRC_DIR_source2
       - cd $CODEBUILD_SRC_DIR_source1
@@ -57,10 +67,15 @@ phases:
  #####     - ifconfig -a
  #     - terraform plan -out plan.out
  ####     - terraform graph | dot -Tpng > graph.png
+
  #####     - terraform state list
  #####     - terraform $TF_COMMAND -auto-approve
  ##### testing git merge
  
+
+##### added a feature here
+
+
 #  artifacts:
 #   files:
 #    - '**.*'
